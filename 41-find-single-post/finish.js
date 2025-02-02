@@ -18,6 +18,17 @@ const posts = [
   { postId: 6134, commentsQuantity: 2 },
 ]
 
+const findPostById = (postId, posts) => {
+  // Знаходимо пост за ID
+  const post = posts.find(post => post.postId === postId)
+
+  // Виводимо ID поста в консоль
+  console.log(post ? post.postId : 'Пост не найден')
+
+  // Якщо пост знайдений, повертаємо його, інакше повертаємо undefined
+  return post
+}
+
 console.log(findPostById(6134, posts)) // { postId: 6134, commentsQuantity: 2 }
 
 console.log(findPostById(4511, posts)) // undefined

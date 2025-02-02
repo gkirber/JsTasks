@@ -8,31 +8,43 @@
  */
 
 const inputProducts = [
-  {
-    title: 'Phone case',
-    price: 23,
-    quantity: 2,
-    category: 'Accessories',
-  },
-  {
-    title: 'Android phone',
-    price: 150,
-    quantity: 1,
-    category: 'Phones',
-  },
-  {
-    title: 'Headphones',
-    price: 78,
-    quantity: 1,
-    category: 'Accessories',
-  },
-  {
-    title: 'Sport Watch',
-    price: 55,
-    quantity: 2,
-    category: 'Watches',
-  },
+    {
+        title: 'Phone case',
+        price: 23,
+        quantity: 2,
+        category: 'Accessories',
+    },
+    {
+        title: 'Android phone',
+        price: 150,
+        quantity: 1,
+        category: 'Phones',
+    },
+    {
+        title: 'Headphones',
+        price: 78,
+        quantity: 1,
+        category: 'Accessories',
+    },
+    {
+        title: 'Sport Watch',
+        price: 55,
+        quantity: 2,
+        category: 'Watches',
+    },
 ]
+
+
+const quantitiesByCategories = (products) => {
+    return products.reduce((acc, product) => {
+        const {category, quantity} = product
+        // Перевіряємо, чи вже є така категорія в об'єкті
+        acc[category] = (acc[category] || 0) + quantity
+
+        return acc
+    }, {})
+}
+
 
 console.log(quantitiesByCategories(inputProducts))
 /* {

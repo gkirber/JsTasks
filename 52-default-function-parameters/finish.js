@@ -14,6 +14,26 @@
  * Внимательно сравните свои результаты с результатами тестовых вызовов
  */
 
+// Рішення без параметра за замовчуванням
+// function weatherForecast (city, weather) {
+//     if (weather === undefined) {
+//         weather = 'Отличная погода!'
+//     }
+//     return `Прогноз погоды для города ${city}: ${weather}`
+// }
+
+// Рішення з параметром за замовчуванням
+function weatherForecast(city, weather = 'Отличная погода!') {
+    return `Прогноз погоды для города ${city}: ${weather}`
+}
+
+// Вариант 2
+// function weatherForecast(city, weather) {
+//     weather = weather !== undefined ? weather : 'Отличная погода!'
+//     return `Прогноз погоды для города ${city}: ${weather}`
+// }
+
+
 console.log(weatherForecast('Dubai', 'Солнечно'))
 // Прогноз погоды для города Dubai: Солнечно
 

@@ -10,3 +10,13 @@
  */
 
 const myCities = ['London', 'New York', 'Singapore']
+
+// Функція cityInfo
+const cityInfo = (city, index) =>
+    `${city} is at the index ${index} in the myCities array`
+
+// Перебір масиву
+myCities.forEach((city, index) => {
+    console.log(cityInfo(city, index))
+})
+

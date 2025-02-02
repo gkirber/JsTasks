@@ -15,3 +15,15 @@ const postsJSON = [
   '{"postId":6134,"commentsQuantity":2}',
   '{"postId":2351,"commentsQuantity":8}',
 ]
+
+// Конвертируем JSON в объекты JavaScript
+const posts = postsJSON.map(post => JSON.parse(post))
+
+// Выводим результирующий масив
+console.log(posts)
+
+// Выводим 'postId' второго объекта
+console.log(posts[1].postId)
+
+// Выводим 'commentsQuantity' последнего объекта
+console.log(posts[posts.length - 1].commentsQuantity)

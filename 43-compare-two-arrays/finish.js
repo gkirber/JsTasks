@@ -14,7 +14,20 @@
 const a = [1, 2, 3]
 const b = [1, 2, 3]
 
-console.log(a === b) // false (Почему?)
+// Вариант 1
+// const areArraysEqual = (firstArray, secondArray) => {
+//     if (firstArray.length !== secondArray.length) {
+//         return false
+//     }
+//     return firstArray.every((elem, index) => elem === secondArray[index])
+// }
+
+// Вариант 2
+const areArraysEqual = (firstArray, secondArray) =>
+    firstArray.length === secondArray.length &&
+    firstArray.every((elem, index) => elem === secondArray[index])
+
+// console.log(a === b) // false (Почему?)
 
 const c = [2, 1, 3]
 const d = [1, 2, 3, 4]
