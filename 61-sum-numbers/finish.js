@@ -8,11 +8,26 @@
  * 3. Также верните эту сумму как результат функции
  */
 
-sumNumbers(1, 3)
-// 4
 
-sumNumbers(10, 20, 5)
-// 35
+// Вариант 1
+function sumNumbers() {
+    let sum = 0
+    for (let i = 0; i < arguments.length; i++) {
+        sum += arguments[i]
+    }
+    console.log('Sumo of all arguments is ', sum)
+    return sum
+}
 
-sumNumbers(2, 5, 80, 1, 10, 12)
-// 110
+
+// Вариант 2
+// const sumNumbers = (...numbers) => {
+//     const sum = numbers.reduce((acc, num) => acc + num, 0)
+//     console.log(sum)
+//     return sum
+// }
+
+
+sumNumbers(1, 3) // 4
+sumNumbers(10, 20, 5) // 35
+sumNumbers(2, 5, 80, 1, 10, 12) // 110

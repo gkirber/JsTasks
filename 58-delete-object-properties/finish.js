@@ -17,7 +17,16 @@ let person = {
   cartId: 435,
 }
 
-console.log(person)
+// Через видалення
+// delete person._id
+// delete person.processed
+// delete person.cart
+
+
+// Використовуємо деструктуризацію та rest-оператор
+const { _id, processed, cart, ...updatedPerson } = person;
+
+console.log(updatedPerson)
 /*
 {
   index: 4,
