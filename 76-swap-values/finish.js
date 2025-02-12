@@ -7,10 +7,9 @@
 let a = 'first'
 let b = 'second'
 
-console.log(a, b)
-// first second
+console.log(a, b); // first second
 
-// Напишите код здесь
+[b, a] = [a, b] // Обмін значень через деструктуризацію
 
 console.log(a, b)
 // second first

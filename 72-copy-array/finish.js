@@ -6,12 +6,19 @@
 
 const a = [1, 2, 3]
 
-// Напишите код здесь
+// Вариант 1
+// const b = [...a]
 
-b.push('newElement')
+// Вариант 2
+// const b = a.slice() // Метод `.slice()` створює копію масиву
 
-console.log(a)
-// [1, 2, 3]
+// Вариант 3
+// const b = Array.from(a)
 
-console.log(b)
-// [1, 2, 3, "newElement"]
+// Вариант 4
+const b = JSON.parse(JSON.stringify(a))
+
+b.push('newElement') // Додаємо елемент у копію
+
+console.log(a) // [1, 2, 3]
+console.log(b) // [1, 2, 3, "newElement"]

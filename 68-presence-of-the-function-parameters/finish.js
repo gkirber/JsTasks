@@ -6,6 +6,16 @@
  */
 
 function square(a) {
+  // Вариант 1
+  // if (a === undefined) {
+  //   throw new Error('Функция "square" не может быть вызвана без аргумента')
+  // }
+
+  // Вариант 2
+  if (arguments.length === 0) {
+    throw new Error('Функция "square" не может быть вызвана без аргумента')
+  }
+
   console.log(a * a)
 }
 
